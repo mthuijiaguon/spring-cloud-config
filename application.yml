@@ -1,9 +1,4 @@
 spring:
-  profiles:
-    active: cloud
----
-spring:
-  profiles: cloud
   jpa:
     show_sql: false
     database: MYSQL
