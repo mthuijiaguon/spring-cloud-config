@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: cloud
+---
+spring:
+  profiles: cloud
+  jpa:
+    show_sql: false
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    repositories:
+      repository-impl-postfix: impl
+  datasource:
+    url: jdbc:mysql://192.168.70.201:3306/demo
+    username: root
+    password: 123
+    driverClassName: com.mysql.jdbc.Driver
+    borrow-connection-timeout: 30
+    validationQuery: SELECT 1
+
